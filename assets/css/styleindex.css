@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff;
+}
+
+nav {
+  width: 100%;
+  background: #ff4081;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+nav ul li{
+    display: flex;
+    align-items: center;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  letter-spacing: 2px;
+  font-style: normal;
+}
+
+#menu-toggle {
+  display: none;
+}
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 90vh;
+}
+
+.container .text {
+  flex: 1;
+  background: linear-gradient(to right, #ffffa8, #ffc0cb);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container .text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.container .text p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.container .text button {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+  width: 180px;
+}
+
+.container .text button:hover {
+  background: #e2336d;
+}
+
+.container .image {
+  flex: 1;
+  background: url("../images/pexels-robin-stickel-70497.jpg") center/cover
+    no-repeat;
+  min-height: 400px;
+}
+.static img {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}
+@media (max-width: 1024) {
+  nav ul {
+    gap: 20px;
+  }
+
+  .container .text h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: 2px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 20px;
+  }
+  .container .text button {
+    padding: 10px 20px;
+    width: 100%;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+
+  .menu-icon img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .text {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .container .text h1 {
+    font-size: 2rem;
+    letter-spacing: 2px !important;
+  }
+}
+
+@media (max-width: 580px) {
+  nav {
+    padding: 5px 15px 0px 0px;
+  }
+  .container .text h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .container .text button {
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 12px;
+  }
+
+  nav {
+    justify-content: end;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #ff4081;
+    position: absolute;
+    top: 36px;
+    right: 18px;
+    width: 200px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 12px;
+  }
+  #menu-toggle:checked ~ ul {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .static img {
+    display: none;
+  }
+  .container .text p {
+    font-size: 12px;
+  }
+}
